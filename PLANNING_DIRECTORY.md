@@ -41,9 +41,8 @@ In future features, users will be able to:
 
 ## Wireframes
 
-- [Mobile-Homepage]()
-- [Mobile-Login/Modal](https://res.cloudinary.com/wjclavell/image/upload/v1598156265/Project%203/Finance-Tracker_Login-Modal_mmfq5h.png)
-- [Desktop](https://res.cloudinary.com/wjclavell/image/upload/v1598200003/Project%203/FinanceTracker_Desktop_h1dcx3.png)
+- [Mobile-Homepage](https://res.cloudinary.com/dcrioc0sw/image/upload/v1600101913/Screen_Shot_2020-09-14_at_12.44.50_PM_rieceq.png)
+- [Desktop](https://res.cloudinary.com/dcrioc0sw/image/upload/v1600105133/Screen_Shot_2020-09-14_at_1.37.35_PM_vwoypr.png)
 
 ## Time/Priority Matrix
 
