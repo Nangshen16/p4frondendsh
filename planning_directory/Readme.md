@@ -35,7 +35,7 @@ Our users will cook and buy the ingredients for their selective recipes faster.
 Users will be able to make an account and sign in. 
 Users will be able to see their history of recipes.
 In future features, users will be able to: 
-- log in using social media accounts
+- log in using social media accounts https://res.cloudinary.com/dcrioc0sw/image/upload/v1600132563/Screen_Shot_2020-09-14_at_9.14.32_PM_bsjfhs.png
 - select dates 
 
 
@@ -102,9 +102,8 @@ Time frames are also key in the development cycle. You have limited time to code
 ## Additional Libraries
 
 - Vue.js (DOM manipulation, fetch requests from the backend, display)
-- ALEX VIDEOS https://sites.google.com/generalassemb.ly/vuesupplement/
-- https://www.youtube.com/playlist?list=PLY6oTPmKnKbbsEAIDfFAlhAVbSCIt2Bxx
-- https://www.youtube.com/playlist?list=PLY6oTPmKnKbYz5bMJizo2e-t0bw7YymLJ
+- Carousel
+- API
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description
