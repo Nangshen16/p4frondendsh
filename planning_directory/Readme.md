@@ -86,11 +86,13 @@ Time frames are also key in the development cycle. You have limited time to code
 
 | Component                     | Priority | Estimated Time | Time Allotted |     Actual Time  |
 | ----------------------------- | :------: | :------------: | :------------: | :---------:     |
-| Hamburger menu/Navbar (mobile-first)  |    H     |   1 hr      |     10 hrs       |     2 hrs|
+| Hamburger menu/Navbar (mobile-first)  |    H     |   1 hr      |     1 hrs       |     2 hrs|
+| Responsive                    |   
 | Sign In Modal                 |    H     |     3 hrs      |      3 hrs       |     1.5 hrs   |
 | Input Modal                   |    H     |     3 hrs      |      3 hrs       |     1.5 hrs   |
-| Vue.js                        |    M     |     3 hrs      |      5 hrs       |     5 hrs     |
-| Total                         |    H     |     23 hrs     |      59 hrs      |    34 hrs     |
+| Show Recipes.                 |    M     |     3 hrs      |      5 hrs       |     5 hrs     |
+| Get Ingredients               |    M.    |       3hrs     |       4          |               |
+| Total                         |    H     |     23 hrs     |      9 hrs       |    34 hrs     |
 
 #### PostMVP
 
