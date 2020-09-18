@@ -18,13 +18,14 @@ export default {
     return {
       username: "",
       password: "",
-      URL: this.url,
+      URL:"http://localhost:8080/" ,
     };
   },
 
-  method: {
+  methods: {
     handleLogin: function() {
-     fetch(`${this.URL}auth/users/login/`, {
+    console.log(this.username,this.password,this.urls)
+     fetch(`http://localhost:8000/auth/users/login/`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",
@@ -37,27 +38,33 @@ export default {
         .then((response) => {
           if (response.status !== 200) {
             //handle incorrect login
-            response.json();
+            response.json()
           } else {
             return response.json();
           }
         })
         .then((data) => {
-          console.log(data);
+          console.log(data)
           if (data) {
-            this.$emit("loggedIn", data);
+            this.$emit("loggedIn", data)
+            console.log(this.token,data)
+          this.token = data.token
+          console.log(this.token)
           } else {
-            alert("Username or Password is incorrect");
+            alert("Username or Password is incorrect")
           }
         });
     },
   },
 };
 </script>
+
+
 <style>
 #login-page {
   height: 100vh;
 }
+
 .login-form {
   padding: 2em;
   display: flex;
@@ -73,6 +80,7 @@ export default {
   border-radius: 1em;
   box-shadow: 0 4px 7px #b1b1b1;
 }
+
 .lfields {
   align-self: center;
   width: 90%;

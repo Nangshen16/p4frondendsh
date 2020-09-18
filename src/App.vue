@@ -1,13 +1,6 @@
 <template>
   <div id="app">
     <Header v-bind:URL="URL"/>
-    <div id="nav">
-      <Header
-        v-bind:url="URL"
-        v-bind:loggedIn="loggedIn"
-        @logout="logout"
-      />
-    </div>
 
     <router-view
     @loggedIn="login($event)"
@@ -15,13 +8,6 @@
     :token="token"
     />
     <Footer/>
-  </div>
-  <footer id="footer">
-        <div class="content has-text-centered">
-          <p></p>
-        </div>
-   </footer>
-    </div>
   </div>
 
 </template>
@@ -31,7 +17,7 @@ import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 
 export default {
-  name: 'App',
+  name: 'Login',
   components: {
     Header,
     Footer

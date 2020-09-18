@@ -17,6 +17,23 @@ Vue.use(VueRouter)
     component: Login,
     props: true
   },
+  //   {
+  //   path: "/profile",
+  //   name: "Profile",
+  //   component: Profile,
+  // },
+  // {
+  //   path: "/signup",
+  //   name: "Signup",
+  //   component: Signup,
+  // },
+  //      {
+  //   path: "/main",
+  //   name: "Main",
+  //   component: Main,
+  //   props: true,
+  // },
+
 ]
 
 const router = new VueRouter({
