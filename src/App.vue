@@ -17,25 +17,27 @@ import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 
 export default {
-  name: 'Login',
+  name: 'App',
   components: {
     Header,
     Footer
+
   },
 
   data:function(){
     return {
       loggedIn: false,
       token: '',
-      URL: 'http://localhost:8080/'
+      URL: 'http://localhost:8000/'
   }
 },
   method: {
    login: function(event){
      console.log('event heard:');
      this.loggedIn = true;
+     console.log("event",event)
      this.token = event.token;
-     console.log(this.token);
+     console.log("token",this.token);
      this.$router.push('/main');
     },
     logout: function(){
@@ -45,6 +47,7 @@ export default {
     signup: function(event) {
       console.log("registered!: ", event);
       this.loggedIn = true;
+      console.log(event)
       this.token = event.token;
       this.$router.push("/main");
     },
