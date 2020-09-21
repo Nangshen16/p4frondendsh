@@ -2,12 +2,13 @@
   <div id="app">
     <Header v-bind:URL="URL"/>
 
-    <router-view
-    @loggedIn="login($event)"
-    v-bind:url="URL"
-    :token="token"
+<!--    <router-view-->
+<!--    @loggedIn="login($event)"-->
+<!--    v-bind:url="URL"-->
+<!--    :token="token"-->
 
-    />
+<!--    />-->
+    <router-view @loggedIn="login($event)" v-bind:url="URL"  :token="token"   :loggedIn="loggedIn" />
     <Footer/>
   </div>
 

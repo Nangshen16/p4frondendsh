@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" v-if="loggedIn">
     <button class="button is-danger" @click="getRecipes">Get Recipes</button>
     <h1>Recipes</h1>
     <Carousel :recipes="this.recipes"/>
@@ -39,10 +39,10 @@ export default {
   components: {
    Carousel
   },
-  props: ["token"],
+  props: ["token","loggedIn"],
 data:function(){
     return {
-      loggedIn: false,
+      // loggedIn: false,
       URL: 'http://localhost:8000/',
       recipes: [],
       title : "",
