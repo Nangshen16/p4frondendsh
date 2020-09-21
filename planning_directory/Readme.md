@@ -22,16 +22,16 @@ You are **responsible** for scheduling time with your squad to seek approval for
 | Day 1 | Project Description                                              | Complete   |
 | Day 1 | Work plan / Priority Matrix / Timeline                           | Complete   |
 | Day 3 | Wireframes                                                       | Complete   |
-| Day 3 | Sign in and sign up screens                                      | INComplete |
-| Day 4 | Home page layout - header, hamburger menu, footer, main screen   | INComplete |
-| Day 4 | Form/field for adding a recipe                                   | INComplete |
-| Day 4 | Form/field for adding an ingredient                              | INComplete |
-| Day 4 | API requests                                                     | INComplete |
-| Day 4 | Recipes display                                                  | INComplete |
-| Day 5 | Styling (mobile-first)                                           | INComplete |
-| Day 5 | Media queries                                                    | INComplete |
-| Day 6 | Bug fixes and QC                                                 | INComplete |
-| Day 6 | Final Touches and Present                                        | INComplete |
+| Day 3 | Sign in and sign up screens                                      | Complete |
+| Day 4 | Home page layout - header, hamburger menu, footer, main screen   | Complete |
+| Day 4 | Form/field for adding a recipe                                   | Complete |
+| Day 4 | Form/field for adding an ingredient                              | Complete |
+| Day 4 | API requests                                                     | Complete |
+| Day 4 | Recipes display                                                  | Complete |
+| Day 5 | Styling (mobile-first)                                           | Complete |
+| Day 5 | Media queries                                                    | Complete |
+| Day 6 | Bug fixes and QC                                                 | Complete |
+| Day 6 | Final Touches and Present                                        | Complete |
 
 ## Project Description
 

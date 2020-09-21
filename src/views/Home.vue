@@ -2,6 +2,16 @@
   <div class="home">
     <button class="button is-danger" @click="getRecipes">Get Recipes</button>
     <h1>Recipes</h1>
+    <Carousel :recipes="this.recipes"/>
+    <div class="Rform">
+      <input class ="input is-primary" type="text" v-model = "title" placeholder = "title"/>
+      <input class ="input is-primary" type="text" v-model = "description" placeholder = "description" />
+      <input class ="input is-primary" type="text" v-model = "cuisine" placeholder = "cuisine"/>
+      <input class ="input is-primary" type="text" v-model = "user" placeholder = "user"/>
+      <button class="button is-danger is-rounded" @click="createRecipe">Create Recipe</button>
+      <button class="button is-danger is-rounded" @click ="updateRecipe(this.updateid)">Update Recipe</button>
+    </div>
+
     <div class="Recipe" v-for="recipe in this.recipes" :key="recipe.id">
       <p>{{recipe.cuisine}}</p>
       <p>{{recipe.title}}</p>
@@ -15,29 +25,139 @@
       <p>{{ingredient.calories}}</p><br>
       <p>{{ingredient.quantity}}</p><br>
       <p>{{ingredient.recipe}}</p><br>
-
-
     </div>
-
+    <button class="button is-black" @click = "deleteRecipe(recipe.id)">Delete</button>
+     <button class="button is-warning" @click="editRecipe(recipe)">Edit</button>
     </div>
   </div>
 </template>
 <script>
 // @ is an alias to /src
-
+import Carousel from '../components/Carousel.vue'
 export default {
   name: 'Home',
   components: {
-
+   Carousel
   },
   props: ["token"],
 data:function(){
     return {
       loggedIn: false,
       URL: 'http://localhost:8000/',
-      recipes: []
+      recipes: [],
+      title : "",
+      description: "",
+      cuisine : "",
+      user : "",
+      updateid: "Lia",
+
   }},
 methods: {
+  deleteRecipe: function (id) {
+    console.log("I'm deleting recipe",id)
+     fetch(`http://localhost:8000/recipes/recipes/${id}`,{
+     method: "delete",
+     headers: {
+       "Content-Type": "application/json",
+       "Authorization" : `JWT ${this.token}`
+     }}
+     )
+
+    .then((response) => {
+          if (response.status !== 204) {
+            //handle incorrect login
+            response.json()
+          } else {
+            return response.json();
+          }
+        })
+        .then((data) => {
+          console.log(data)
+          if (data) {
+            console.log("I just deleted recipe")
+          } else {
+            alert("Username or Password is incorrect")
+          }
+        });
+
+  },
+  updateRecipe: function(id) {
+    console.log("I'm updating recipe",id)
+
+    fetch(`http://localhost:8000/recipes/recipes/${id}`,{
+     method: "put",
+     headers: {
+       "Content-Type": "application/json",
+       "Authorization" : `JWT ${this.token}`
+     },
+     body: JSON.stringify({
+       title: this.title,
+       description: this.description,
+       cuisine: this.cuisine,
+       user: this.user
+     })
+   })
+    .then((response) => {
+          if (response.status !== 201) {
+            //handle incorrect login
+            response.json()
+          } else {
+            return response.json();
+          }
+        })
+        .then((data) => {
+          console.log(data)
+          if (data) {
+            console.log("I just created recipe")
+          } else {
+            alert("Username or Password is incorrect")
+          }
+        });
+  },
+  editRecipe: function (recipe) {
+    console.log("Recipe",recipe)
+    this.title = recipe.title
+    this.description = recipe.description
+    this.cuisine = recipe.cuisine
+    this.user = recipe.user
+  },
+
+  createRecipe: function () {
+    console.log("I m getting recipe")
+    console.log(this.title,this.description,this.cuisine,this.user,this.token)
+    fetch(`http://localhost:8000/recipes/recipes/`,{
+     method: "post",
+     headers: {
+       "Content-Type": "application/json",
+       "Authorization" : `JWT ${this.token}`
+     },
+     body: JSON.stringify({
+       title: this.title,
+       description: this.description,
+       cuisine: this.cuisine,
+       user: this.user
+     })
+   })
+    .then((response) => {
+          if (response.status !== 201) {
+            //handle incorrect login
+            response.json()
+          } else {
+            return response.json();
+          }
+        })
+        .then((data) => {
+          console.log(data)
+          if (data) {
+            console.log("I just created recipe")
+          } else {
+            alert("Username or Password is incorrect")
+          }
+        });
+  },
+
+
+
   getRecipes: function(){
   console.log('this function is getting recipes', `our token is ${this.token}`)
   fetch(`http://localhost:8000/recipes/recipes/`, {
@@ -65,6 +185,7 @@ methods: {
           }
         });
         }
+
 }
 }
 </script>
@@ -113,6 +234,7 @@ img {
   font-size: 30px;
 
 }
+
 
 
 

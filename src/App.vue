@@ -6,6 +6,7 @@
     @loggedIn="login($event)"
     v-bind:url="URL"
     :token="token"
+
     />
     <Footer/>
   </div>
@@ -21,7 +22,9 @@ export default {
   name: 'App',
   components: {
     Header,
-    Footer
+    Footer,
+
+
 
   },
 
