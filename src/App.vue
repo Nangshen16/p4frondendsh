@@ -15,6 +15,7 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+// import Carousel from ',/components/Carousel.vue'
 
 export default {
   name: 'App',
@@ -31,7 +32,7 @@ export default {
       URL: 'http://localhost:8000/'
   }
 },
-  method: {
+  methods: {
    login: function(event){
      console.log('event heard:');
      this.loggedIn = true;

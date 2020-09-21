@@ -25,7 +25,7 @@
 
       <template slot="end">
         <b-navbar-item tag="div">
-          <div class="buttons">
+          <div class="button is-black">
                <router-link to="/login" v-bind:URL="URL">Log in</router-link>
           </div>
         </b-navbar-item>
@@ -48,6 +48,7 @@ margin: 10px auto;
 .header {
     width: 90%;
     margin: 10px auto
+
 }
 
 </style>
