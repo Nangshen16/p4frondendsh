@@ -9,21 +9,21 @@
 
 <!--    />-->
     <router-view @loggedIn="login($event)" v-bind:url="URL"  :token="token"   :loggedIn="loggedIn" />
-    <Footer/>
+<!--    <Footer/>-->
   </div>
 
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+// import Footer from './components/Footer.vue'
 // import Carousel from ',/components/Carousel.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Footer,
+    // Footer,
 
 
 

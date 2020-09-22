@@ -18,8 +18,8 @@
       <p>{{recipe.cuisine}}</p>
       <p>{{recipe.title}}</p>
       <p>{{recipe.description}}</p>
-      <img src="https://res.cloudinary.com/dcrioc0sw/image/upload/v1600648405/p4pics_hdg6o4.webp" width="350" height="263">
-      <img src="https://res.cloudinary.com/dcrioc0sw/image/upload/v1600649225/p4pic1_zqexbq.jpg" width="350" height="263">
+<!--      <img src="https://res.cloudinary.com/dcrioc0sw/image/upload/v1600648405/p4pics_hdg6o4.webp" width="350" height="263">-->
+<!--      <img src="https://res.cloudinary.com/dcrioc0sw/image/upload/v1600649225/p4pic1_zqexbq.jpg" width="350" height="263">-->
 
     <div class="Ingredient" v-for="ingredient in recipe.ingredients" :key="ingredient.id">
       <p>{{ingredient.title}}</p><br>
@@ -268,12 +268,26 @@ img {
 /*    display: inline-block;*/
 
 /*}*/
-.Recipe>p,.button,input {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 10px 0;
+/*.Recipe>p,.button,input {*/
+/*  display: inline-block;*/
+/*  vertical-align: middle;*/
+/*  margin: 10px 0;*/
+/*}*/
+.Recipe{
+border: 1px solid blue;
+display: flex;
+flex-direction: column;
+margin: 10px;
 }
-
+.Recipe > p, .Recipe > button {
+  padding: 10px;
+  border: 5px solid #ECF87F;
+  background-color: #AA1945;
+  margin: 5px 5px;
+  color: #F85C70;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px ;
+}
 
 
 *@media only screen and (min-width: 700px) {
