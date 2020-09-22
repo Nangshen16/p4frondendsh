@@ -1,4 +1,5 @@
 <template>
+
   <div class="home" v-if="loggedIn">
     <button class="button is-danger" @click="getRecipes">Get Recipes</button>
     <h1>Recipes</h1>
@@ -8,6 +9,7 @@
       <input class ="input is-primary" type="text" v-model = "description" placeholder = "description" />
       <input class ="input is-primary" type="text" v-model = "cuisine" placeholder = "cuisine"/>
       <input class ="input is-primary" type="text" v-model = "user" placeholder = "user"/>
+
       <button class="button is-danger is-rounded" @click="createRecipe">Create Recipe</button>
       <button class="button is-danger is-rounded" @click ="updateRecipe(this.updateid)">Update Recipe</button>
     </div>
@@ -30,6 +32,7 @@
      <button class="button is-warning" @click="editRecipe(recipe)">Edit</button>
     </div>
   </div>
+
 </template>
 <script>
 // @ is an alias to /src
@@ -209,7 +212,8 @@ img {
 }
 
 .Recipe > p {
-  width: 20%;
+  float: left;
+  width: 25%;
   padding: 10px;
   border: 5px solid #ECF87F;
   background-color: #AA1945;
@@ -234,6 +238,55 @@ img {
   font-size: 30px;
 
 }
+.Rform {
+  display: flex;
+  justify-content: flex-start;
+  /*flex-flow: column wrap;*/
+  align-self: auto;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+/*input[type=submit] {*/
+/*  display: inline-block;*/
+/*  background-color: #4CAF50;*/
+/*  color: white;*/
+/*  padding: 12px 20px;*/
+/*  border: none;*/
+/*  border-radius: 4px;*/
+/*  cursor: pointer;*/
+/*  float: right;*/
+/*}*/
+
+
+/*input[type=submit],.Recipe > p{*/
+/*  !*display: flex;*!*/
+/*  !*justify-content: flex-end;*!*/
+/*  !*align-items: baseline;*!*/
+/*  padding: 14px 28px;*/
+/*    font-size: 16px;*/
+/*    cursor: pointer;*/
+/*    display: inline-block;*/
+
+/*}*/
+.Recipe>p,.button,input {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+
+
+
+*@media only screen and (min-width: 700px) {
+ .Recipe {
+   display: inline-block;
+
+ }
+}
+
+
+
+
+
 
 
 
