@@ -274,12 +274,13 @@ img {
 /*  margin: 10px 0;*/
 /*}*/
 .Recipe{
-border: 1px solid blue;
 display: flex;
 flex-direction: column;
+align-items: center;
 margin: 10px;
 }
 .Recipe > p, .Recipe > button {
+  width: 100%;
   padding: 10px;
   border: 5px solid #ECF87F;
   background-color: #AA1945;
